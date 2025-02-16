@@ -6,7 +6,7 @@ import { type Metadata } from "next";
 export const metadata: Metadata = {
   title: "Axolotl Logic",
   description:
-    "Axolotl Logic helps those struggling with low motivation and executive dysfunction reach their goals by providing them engaging and innovative tools, games, and online communities.",
+    "We build tools, games, and communities to help fellow neurodivergent nerds achieve their dreams.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
