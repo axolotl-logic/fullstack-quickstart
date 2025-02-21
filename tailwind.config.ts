@@ -10,5 +10,9 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-mixins"), require("tailwindcss-typography")],
+  plugins: [
+    require("tailwindcss-mixins"),
+    require("tailwindcss-typography"),
+    require("daisyui"),
+  ],
 } satisfies Config;

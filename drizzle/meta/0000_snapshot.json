@@ -1,0 +1,65 @@
+{
+  "id": "18504fa7-d8ba-4c5a-9fb0-e2acc366688a",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.axolotl__chess_pgns": {
+      "name": "axolotl__chess_pgns",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "pgn_text": {
+          "name": "pgn_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_uploaded": {
+          "name": "last_uploaded",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "axolotl__chess_pgns_pgn_text_unique": {
+          "name": "axolotl__chess_pgns_pgn_text_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "pgn_text"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
