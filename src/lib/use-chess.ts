@@ -8,14 +8,14 @@ export function useChess(pgnText: string, moveIdx: number) {
 
     const current = new Chess();
     c.history().forEach((move, idx) => {
-      if (idx > moveIdx) {
+      if (idx >= moveIdx) {
         return;
       }
 
       current.move(move);
     });
 
-    return c;
+    return current;
   }, [pgnText, moveIdx]);
 
   return chess;
